@@ -1,0 +1,51 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;go.admin.youqu.com&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../rpc" />
+      <root url="file://$PROJECT_DIR$/../test" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../gotcp" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../pool" />
+      <root url="file://$PROJECT_DIR$/../socket-test" />
+      <root url="file://$PROJECT_DIR$/../sorm" />
+      <root url="file://$PROJECT_DIR$/../gotest" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../webstorm" />
+      <root url="file://$PROJECT_DIR$/../goweb" />
+      <root url="file://$PROJECT_DIR$/../signal_test" />
+      <root url="file://$PROJECT_DIR$/../godep_test" />
+      <root url="file://$PROJECT_DIR$/../socket" />
+      <root url="file://$PROJECT_DIR$/../.idea" />
+      <root url="file://$PROJECT_DIR$/../web_echo" />
+      <root url="file://$PROJECT_DIR$/../gomysql" />
+      <root url="file://$PROJECT_DIR$/../helloworld" />
+      <root url="file://$PROJECT_DIR$/../go_cc++" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../rpc" />
+      <root url="file://$PROJECT_DIR$/../test" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../gotcp" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../pool" />
+      <root url="file://$PROJECT_DIR$/../socket-test" />
+      <root url="file://$PROJECT_DIR$/../sorm" />
+      <root url="file://$PROJECT_DIR$/../gotest" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../webstorm" />
+      <root url="file://$PROJECT_DIR$/../goweb" />
+      <root url="file://$PROJECT_DIR$/../signal_test" />
+      <root url="file://$PROJECT_DIR$/../godep_test" />
+      <root url="file://$PROJECT_DIR$/../socket" />
+      <root url="file://$PROJECT_DIR$/../.idea" />
+      <root url="file://$PROJECT_DIR$/../web_echo" />
+      <root url="file://$PROJECT_DIR$/../gomysql" />
+      <root url="file://$PROJECT_DIR$/../helloworld" />
+      <root url="file://$PROJECT_DIR$/../go_cc++" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

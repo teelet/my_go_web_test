@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ab0ad62c-4963-4e3a-9ff6-936c3a972d26" name="139.129.36.196" url="http://139.129.36.196">
+        <fileTransfer host="139.129.36.196" port="21" rootFolder="/usr/local/gopath/src/go.admin.youqu.com" password="df9bdf98df99dfdbdfdddfcf" username="shaohua">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

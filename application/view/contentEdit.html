@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="/css/content.css" />
+	<link rel="stylesheet" href="./css/contentManage.css" />
+	<SCRIPT src="/js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="text/javascript" src="/js/content.js"></SCRIPT>
+	<title>文章详情</title>
+	<style>
+		.select{
+			height: 25px;
+		    border: 1px solid #e1e0e0;
+		    width: 150px;
+		    margin: 10px 20px 10px 10px;
+		    background-color: #ebebeb;
+		}
+	</style>
+</head>
+<body>
+	<div class="content common_box">
+		<div class="zone1 ">
+			<table class="table editTable common_margin">
+				<tr>
+					<td colspan="2"><div class="a_title">标题</div></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="text" name="tag" value="" placeholder="请输入标题" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><div class="a_title">摘要</div></td>
+				</tr>
+				<tr>
+					<td colspan="2"><textarea name="summary" id="summary" cols="30" rows="10" placeholder="请输入摘要"></textarea></td>
+				</tr>
+				<tr>
+					<td width="100"><span class="editMargin">原创时间：</span></td>
+					<td><span class="editMargin">2016-03-28 10:46:59</span></td>
+				</tr>
+				<tr>
+					<td><span class="editMargin">一级标签：</span></td>
+					<td>
+						<select name="firstClassTag" id="firstClassTag" class="select">
+							<option value="0">==请选择==</option>
+							<option value="1" selected="selected">一级标签1</option>
+							<option value="2" >一级标签2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><span class="editMargin">二级标签：</span></td>
+					<td id="secondClassTagCollect">
+						<input type="checkbox" name="secondClassTag1" value="EDG:1" tag="1" id="secondClassTag1"/>&nbsp;<label for="secondClassTag1">EDG：1</label>&nbsp;&nbsp;
+						<input type="checkbox" name="secondClassTag2" value="ROX:0.3" tag="1" id="secondClassTag2"/>&nbsp;<label for="secondClassTag2">ROX：0.3</label> &nbsp;&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td><span class="editMargin">添加标签：</span></td>
+					<td>
+						<select name="tag2add" id="tag2add"  class="select">
+							<option value="0">==请选择==</option>
+							<option value="标签1">标签1</option>
+							<option value="标签2">标签2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="text" name="tagScore" id="tagScore" placeholder="标签得分"/>&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="button" name="addTag" class="submit" id="addTag" value="添加" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><hr /></td>
+				</tr>
+				<tr>
+					<td><span class="editMargin">内容类型：</span></td>
+					<td>
+						<select name="contentType" id="contentType"  class="select">
+							<option value="0">==请选择==</option>
+							<option value="1">攻略</option>
+							<option value="1">电子竞技</option>
+							<option value="1">新闻</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><span class="editMargin">内容形式：</span></td>
+					<td>
+						<select name="contentStyle" id="contentStyle"  class="select">
+							<option value="0">==请选择==</option>
+							<option value="1">文章</option>
+							<option value="1">GIF</option>
+							<option value="1">短视频</option>
+							<option value="1">长视频</option>
+							<option value="1">视频</option>
+							<option value="1">PC壁纸</option>
+							<option value="1">手机壁纸</option>
+							<option value="1">cosplay图片</option>
+							<option value="1">图集</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><a href="#" class="common_a" target="_blank">链接原文</a></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" id="buttonTd">
+						<input type="submit" name="cancel" value="取消" class="editButton submit"/>
+						<input type="submit" name="save" value="保存" class="editButton submit"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

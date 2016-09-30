@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游趣-后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <SCRIPT src="js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="text/javascript" src="js/main.js"></SCRIPT>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <div class="header clear">
+        <div class="header_div1">
+            <span class="header_span1">游趣-运营后台管理系统</span>
+        </div>
+        <div class="header_div2">
+            <a class="div2_a1 a_common1" href="#">账号:xxx</a>
+            <a class="div2_a2 a_common1" href="#">退出 !</a>
+        </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="main clear">
+        <div class="left">
+            <ul>
+                <li><a href="contentManage.html" target="main_show">内容管理</a><input type="hidden" value="内容管理"></li>
+                <li class="toggle_li"><a>其他操作</a><input type="hidden" value="none">
+                    <ul>
+                        <li><a href="changeKnowledgeDb.html" target="main_show">更新知识库</a><input type="hidden" value="其他操作 > 更新知识库"></li>
+                        <li><a href="addArticle.html" target="main_show">添加内容</a><input type="hidden" value="其他操作 > 添加内容"></li>
+                        <li><a href="addTag.html" target="main_show">添加标签</a><input type="hidden" value="其他操作 > 添加标签"></li>
+                        <li><a href="addAlias.html" target="main_show">添加别名</a><input type="hidden" value="其他操作 > 添加别名"></li>
+                    </ul>
+                </li>
+                <li><a href="authManage.html" target="main_show">权限管理</a><input type="hidden" value="权限管理"></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div>当前位置: &nbsp;&nbsp;&nbsp;&nbsp;<a class="user_position"><b>内容管理</b></a></div>
+            <div>
+                <iframe id="iframepage" name="main_show" src="contentManage.html" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

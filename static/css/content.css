@@ -1,0 +1,168 @@
+body{
+    background: #ebebeb;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+    color: #222;
+    font-size: 13px;
+}
+*{padding: 0px;margin: 0px;}
+.clear:after{
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+    line-height: 0px;
+    content: '.';
+}
+.zone1{
+	padding: 10px;
+	width: 80%;
+	margin: 10px auto;
+}
+.table{
+	width: 100%;
+	text-align: left;
+	border:1px dotted black;
+	padding: 5px;
+}
+.table tr{
+	height: 30px;
+}
+select{
+	width: 200px;
+}
+button[name=search]{
+	width: 150px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	cursor: pointer;
+}
+.zone2{
+	padding:10px;
+	margin: 10px auto;
+	width: 80%;
+}
+.paragraph{
+	padding: 10px;
+	border:1px solid black;
+	margin-bottom: 10px;
+}
+.paragraph h2{
+	margin-bottom: 10px;
+}
+.paragraph p{
+	margin-bottom: 10px;
+}
+
+.oriTime{
+	display: block;
+	margin-bottom: 5px;
+}
+.link a,.orilink{
+	margin-right: 20px;
+	color:black;
+	text-decoration: none;
+	font-weight: bold;
+}
+.link a:visited,.orilink:visited{
+	color:black;
+}
+.link a:hover,.orilink:hover{
+	color:#008ead;
+}
+
+/* 下面是对contentEidt中的设置*/
+.editTable{
+	border: none;
+}
+.editTable textarea[name=summary]{
+	width: 90%;
+	font-size: 13px;
+}
+.editTable input[name=tagScore]{
+	height: 25px;
+	font-size: 13px;
+	width: 140px;
+}
+.editTable input[name=tag]{
+	height: 25px;
+	font-size: 13px;
+	width: 500px;
+}
+.editTable input[name=addTag],.editButton{
+	width: 80px;
+	cursor: pointer;
+}
+.editTable input[type=checkbox],.editTable #tagScore,.editTable .editMargin{
+	margin: 10px 0px 10px 10px;
+}
+#buttonTd{
+	padding-right: 10%;
+}
+.editButton{
+	margin-right: 20px;
+}
+/*对authManage中的内容设置*/
+.zone3{
+	padding:10px;
+	margin: 10px auto;
+	width: 80%;
+}
+.zone1 h2,.zone2 h2,.zone3 h2{
+	font-weight: normal;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.zone1 hr{
+	border: none;
+    border-bottom: 1px solid #008ead;
+}
+.authTable{
+	width: 90%;
+	border: none;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.authTable h3{
+	font-weight: normal;
+	font-size: 13px;
+	margin: 10px 0px 0px 10px;
+}
+.authTable select{
+	font-size: 13px;
+}
+.authTable input{
+	width: 150px;
+	font-size: 13px;
+}
+.authTable input[type=text]{
+	border: 1px solid #e1e0e0;
+    margin: 10px 20px 0px 10px;
+	height: 25px;
+}
+.authTable input[type=password]{
+	border: 1px solid #e1e0e0;
+	margin: 10px 20px 0px 10px;
+	height: 25px;
+}
+.authTable input[type=submit]{
+	width: 80px;
+	cursor: pointer;
+}
+.listTable{
+	width: 80%;
+	border-collapse: collapse; 
+	border: none;
+	margin-left: 28px;
+}
+.listTable th,.listTable td{
+	border: solid #008ead 1px;
+	padding: 3px;
+	text-align: center;
+}
+.checkbox_td input{
+	width: 20px;
+	margin-left: 15px;
+}
+.float_input{
+	float: right;
+}

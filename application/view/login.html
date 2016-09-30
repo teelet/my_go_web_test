@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <TITLE>游趣-后台管理系统</TITLE>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <SCRIPT src="/js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="/js/jquery.sha1.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="text/javascript" src="/js/login.js"></SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="top_div"></DIV>
+<DIV class="sec_div">
+    <DIV class="thr_div">
+        <DIV class="tou"></DIV>
+        <DIV class="initial_left_hand" id="left_hand"></DIV>
+        <DIV class="initial_right_hand" id="right_hand"></DIV>
+    </DIV>
+    <form id="login_form" action="/index" method="post">
+        <P class="fir_p">
+            <SPAN class="u_logo"></SPAN>
+            <INPUT class="ipt" id="username" name="username" type="text" placeholder="请输入用户名" value="{{.userName}}">
+        </P>
+        <P class="sec_p">
+            <SPAN class="p_logo"></SPAN>
+            <INPUT class="ipt" id="password" type="text" onfocus="this.type='password'" placeholder="请输入密码" value="">
+        <p id="checkMsg"></p>
+        </P>
+        <DIV class="for_div">
+            <P class="thr_p">
+                    <SPAN style="float: right; margin-right: 50px">
+                        <input type="button" class="but_a" value="登录" />
+                    </SPAN>
+            </P>
+        </DIV>
+    </form>
+</DIV>
+</BODY>
+</HTML>

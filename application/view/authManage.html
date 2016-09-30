@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.page.js.css">
+    <link rel="stylesheet" href="/css/content.css" />
+    <link rel="stylesheet" href="/css/contentManage.css" />
+    <SCRIPT src="/js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="/js/jquery.page.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="/js/jquery.sha1.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="text/javascript" src="/js/content.js"></SCRIPT>
+    <title>权限管理</title>
+</head>
+<body>
+<div class="content">
+    <div id="res_msg" style="display: none;text-align: center;color:#008ead;margin: 5px auto;font-size: 18px;">{{.res_msg}}</div>
+    {{if eq .user "root"}}
+    <div class="common_box">
+        <div class="zone1">
+            <h2>更新管理员权限</h2>
+            <form action="/authManage/updateRoot" method="post">
+                <table class="table authTable" id="authModify">
+                    <tr>
+                        <td width="15%">管理员:</td>
+                        <td><input type="text" name="username" id="add_mailbox" placeholder="用户名" /></td>
+                    </tr>
+                    <tr>
+                        <td >选择权限:</td>
+                        <td class="checkbox_td">
+                            {{range $k, $v := .auth}}
+                            <input type="checkbox" value="{{$k}}" name="auth[]"/>
+                                <label class="selectPrevCheckbox">{{$v.AuthName}}</label>
+                            {{end}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit"  class="submit float_input" id="addAuth" value="操作"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="common_box">
+        <div class="zone1">
+            <h2>更新管理员密码</h2>
+            <form action="/authManage/updatePasswd" method="post">
+                <table class="table authTable" id="">
+                    <tr>
+                        <td width="15%">管理员:</td>
+                        <td><input type="text" name="username" id="change_mailbox" placeholder="用户名" /></td>
+                    </tr>
+                    <tr>
+                        <td >密码:</td>
+                        <td class="">
+                            <input type="text" id="passwd_show" placeholder="密码" />
+                            <input type="hidden" name="password" id="passwd_hidden" value=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit"  class="submit float_input" id="changePasswd" value="操作"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    {{end}}
+    <div class="common_box">
+        <div class="zone2">
+            <h2>管理员列表</h2>
+            <table class="table authTable listTable">
+                <tr>
+                    <th>用户名</th>
+                    <th>权限</th>
+                    <th>执行者</th>
+                    <th>添加时间</th>
+                </tr>
+                {{range .roots}}
+                <tr>
+                    <td>{{.UserName}}</td>
+                    <td>{{.Auth}}</td>
+                    <td>{{.Executor}}</td>
+                    <td>{{.Atime}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </div>
+    </div>
+
+    <div class="common_box">
+        <div class="zone3">
+            <h2>操作日志</h2>
+            <table class="table authTable listTable">
+                <tr>
+                    <th>操作人</th>
+                    <th>时间</th>
+                    <th>操作内容</th>
+                    <th>IP</th>
+                </tr>
+               {{range .logs}}
+                <tr>
+                    <td>{{.UserName}}</td>
+                    <td>{{.Atime}}</td>
+                    <td>{{.Content}}</td>
+                    <td>{{.Ip}}</td>
+                </tr>
+                {{end}}
+            </table>
+            <div id="pager1"></div>
+        </div>
+    </div>
+
+</div>
+<input type="hidden" id="allPage" value="{{.allPage}}">
+<input type="hidden" id="currentPage" value="{{.currentPage}}">
+<script type="text/javascript">
+    allPage = $("#allPage").val()
+    currentPage = $("#currentPage").val()
+    $("#pager1").createPage({
+        pageCount: allPage,
+        current: currentPage,
+    backFn: function (page) {
+        window.location.href = '/authManage?page=' + page;
+    }
+    })
+</script>
+</body>
+</html>

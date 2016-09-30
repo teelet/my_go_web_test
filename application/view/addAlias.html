@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加别名</title>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.page.js.css">
+    <link rel="stylesheet" type="text/css" href="/css/contentManage.css">
+    <SCRIPT src="/js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="/js/jquery.page.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="/js/contentManage.js"></SCRIPT>
+    <script src="/js/jquery.cxselect.min.js"></script>
+</head>
+<body>
+<div class="common_box">
+    <div class="search_div">
+
+        <form id="tag_custom" action="" method="get">
+            标签类别:
+            <select class="first" data-value="标签类别" disabled="disabled" name="tag_catalog" id="tag_catalog">
+                <option value="0">==选择游戏==</option>
+            </select>
+            一级标签:
+            <select class="second" data-value="一级标签" disabled="disabled" name="tag_level1" id="tag_level1">
+                <option value="1">一级标签</option>
+            </select><br/>
+            标签名称:
+            <select class="third" data-value="具体标签名称" disabled="disabled" name="tag_name" id="tag_name">
+                <option value="0">具体标签名称</option>
+            </select>
+            <input class="submit" type="submit" name="search_submit" value="查询别名" />
+            <br/>
+            别名列表:
+            <select name="alias_name_list" id="alias_name_list">
+                <option value="0">==别名列表==</option>
+                <option value="1">==别名1==</option>
+                <option value="2">==别名2==</option>
+            </select>
+        </form>
+        <form action="" method="get">
+            新增别名:
+            <input type="text" name="alias_name" placeholder="请输入新增的别名"/>
+            <input class="submit" type="submit" name="add_submit" value="添加别名" />
+        </form>
+
+    </div>
+    <div class="holder"></div>
+</div>
+
+<script type="text/javascript">
+    $('#tag_custom').cxSelect({
+        selects: ['first', 'second', 'third'],
+        required: true,
+        url: [
+            {'v': 1, 'n': '英雄联盟', 's': [
+                {'v': 1, 'n': '英雄联盟一级标签', 's': [
+                    {'v': 1, 'n': '英雄联盟一级标签具体名称1'},
+                    {'v': 2, 'n': '英雄联盟一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': '英雄联盟二级标签', 's': [
+                    {'v': 1, 'n': '英雄联盟二级标签具体名称1'},
+                    {'v': 2, 'n': '英雄联盟二级标签具体名称2'}
+                ]},
+                {'v': 3, 'n': '英雄联盟三级标签', 's': [
+                    {'v': 1, 'n': '英雄联盟三级标签具体名称1'},
+                    {'v': 2, 'n': '英雄联盟三级标签具体名称2'}
+                ]}
+            ]},
+            {'v': 2, 'n': '守望先锋', 's': [
+                {'v': 1, 'n': '守望先锋一级标签', 's': [
+                    {'v': 1, 'n': '守望先锋一级标签具体名称1'},
+                    {'v': 2, 'n': '守望先锋一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': '守望先锋二级标签', 's': [
+                    {'v': 1, 'n': '守望先锋二级标签具体名称1'},
+                    {'v': 2, 'n': '守望先锋二级标签具体名称2'}
+                ]},
+                {'v': 3, 'n': '守望先锋三级标签', 's': [
+                    {'v': 1, 'n': '守望先锋三级标签具体名称1'},
+                    {'v': 2, 'n': '守望先锋三级标签具体名称2'}
+                ]}
+            ]},
+            {'v': 3, 'n': 'DOTA2', 's': [
+                {'v': 1, 'n': 'DOTA2一级标签', 's': [
+                    {'v': 1, 'n': 'DOTA2一级标签具体名称1'},
+                    {'v': 2, 'n': 'DOTA2一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': 'DOTA2二级标签', 's': [
+                    {'v': 1, 'n': 'DOTA2二级标签具体名称1'},
+                    {'v': 2, 'n': 'DOTA2二级标签具体名称2'}
+                ]},
+                {'v': 3, 'n': 'DOTA2三级标签', 's': [
+                    {'v': 1, 'n': 'DOTA2三级标签具体名称1'},
+                    {'v': 2, 'n': 'DOTA2三级标签具体名称2'}
+                ]}
+            ]},
+            {'v': 4,'n': '炉石传说', 's': [
+                {'v': 1, 'n': '炉石传说一级标签', 's': [
+                    {'v': 1, 'n': '炉石传说一级标签具体名称1'},
+                    {'v': 2, 'n': '炉石传说一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': '炉石传说二级标签', 's': [
+                    {'v': 1, 'n': '炉石传说二级标签具体名称1'},
+                    {'v': 2, 'n': '炉石传说二级标签具体名称2'}
+                ]},
+                {'v': 3, 'n': '炉石传说三级标签', 's': [
+                    {'v': 1, 'n': '炉石传说三级标签具体名称1'},
+                    {'v': 2, 'n': '炉石传说三级标签具体名称2'}
+                ]}
+            ]}
+        ]
+    });
+</script>
+</div>
+</body>
+</html>

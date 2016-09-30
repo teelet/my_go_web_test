@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加标签</title>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.page.js.css">
+    <link rel="stylesheet" type="text/css" href="/css/contentManage.css">
+    <SCRIPT src="/js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="/js/jquery.page.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="text/javascript" src="/js/contentManage.js"></SCRIPT>
+    <script src="/js/jquery.cxselect.min.js"></script>
+</head>
+<body>
+<div class="common_box">
+    <div class="search_div">
+
+        <form id="tag_custom" action="" method="get">
+            标签名称:
+            <input type="text" name="tag_name" placeholder="请输入标签名称"/>
+            标签类别:
+            <select class="first" disabled="disabled" name="tag_catalog" id="tag_catalog">
+            </select><br/>
+            标签级别:
+            <select class="second" disabled="disabled" name="tag_level1" id="tag_level1">
+            </select>
+            一级标签:
+            <select class="third" disabled="disabled" name="tag_level2" id="tag_level2">
+            </select><br/>
+            二级标签:
+            <select class="forth" disabled="disabled" name="tag_level3" id="tag_level3">
+            </select>
+            <input class="submit" type="submit" name="editsubmit" value="添加"/>
+        </form>
+    </div>
+    <div class="holder"></div>
+</div>
+<script type="text/javascript">
+    $('#tag_custom').cxSelect({
+        selects: ['first', 'second', 'third','forth'],
+        required: true,
+        url: [
+            {'v': 1, 'n': '英雄联盟', 's': [
+                {'v': 1, 'n': '英雄联盟一级标签', 's': [
+                    {'v': 1, 'n': '英雄联盟一级标签具体名称1'},
+                    {'v': 2, 'n': '英雄联盟一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': '英雄联盟二级标签', 's': [
+                    {'v': 1, 'n': '====', 's': [
+                        {'v': 1, 'n': '英雄联盟二级标签具体名称1'},
+                        {'v': 2, 'n': '英雄联盟二级标签具体名称2'}
+                    ]}
+                ]}
+            ]},
+            {'v': 2, 'n': '守望先锋', 's': [
+                {'v': 1, 'n': '守望先锋一级标签', 's': [
+                    {'v': 1, 'n': '守望先锋一级标签具体名称1'},
+                    {'v': 2, 'n': '守望先锋一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': '守望先锋二级标签', 's': [
+                    {'v': 1, 'n': '====', 's': [
+                        {'v': 1, 'n': '守望先锋二级标签具体名称1'},
+                        {'v': 2, 'n': '守望先锋二级标签具体名称2'}
+                    ]}
+                ]}
+            ]},
+            {'v': 3, 'n': 'DOTA2', 's': [
+                {'v': 1, 'n': 'DOTA2一级标签', 's': [
+                    {'v': 1, 'n': 'DOTA2一级标签具体名称1'},
+                    {'v': 2, 'n': 'DOTA2一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': 'DOTA2二级标签', 's': [
+                    {'v': 1, 'n': '====', 's': [
+                        {'v': 1, 'n': 'DOTA2二级标签具体名称1'},
+                        {'v': 2, 'n': 'DOTA2二级标签具体名称2'}
+                    ]}
+                ]}
+            ]},
+            {'v': 4,'n': '炉石传说', 's': [
+                {'v': 1, 'n': '炉石传说一级标签', 's': [
+                    {'v': 1, 'n': '炉石传说一级标签具体名称1'},
+                    {'v': 2, 'n': '炉石传说一级标签具体名称2'}
+                ]},
+                {'v': 2, 'n': '炉石传说二级标签', 's': [
+                    {'v': 1, 'n': '====', 's': [
+                        {'v': 1, 'n': '炉石传说二级标签具体名称1'},
+                        {'v': 2, 'n': '炉石传说二级标签具体名称2'}
+                    ]}
+                ]}
+            ]}
+        ]
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容管理</title>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.page.js.css">
+    <link rel="stylesheet" type="text/css" href="/css/contentManage.css">
+    <SCRIPT src="/js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="/js/jquery.page.js" type="text/javascript"></SCRIPT>
+    <SCRIPT type="text/javascript" src="/js/contentManage.js"></SCRIPT>
+</head>
+<body>
+    <div class="common_box">
+        <div class="search_div">
+            <form action="" method="get">
+                游戏名称:
+                <select>
+                    <option>游戏</option>
+                    <option>游戏</option>
+                    <option>游戏</option>
+                </select>
+                内容类型:
+                <select>
+                    <option>类型</option>
+                    <option>类型</option>
+                    <option>类型</option>
+                </select><br/>
+                游戏角色:
+                <select>
+                    <option>角色</option>
+                    <option>角色</option>
+                    <option>角色</option>
+                </select>
+                内容形式:
+                <select>
+                    <option>形式</option>
+                    <option>形式</option>
+                    <option>形式</option>
+                </select>
+                <input class="submit" type="submit" value="查询" />
+            </form>
+        </div>
+        <div class="holder"></div>
+    </div>
+    <hr class="hr_h"/>
+    <div>
+        <div class="common_box">
+            <div class="content_item">
+                <div class="a_title">标题</div>
+                <div class="common_margin">摘要: <span>很多人看到LPL的职业选手在比赛时光芒四很多人看到LPL手在比赛时光芒四很多人看到LPL手在比赛时光芒四很多人看到LPL手在比赛时光芒四很多人看到LPL的职业选手在比赛时光芒四很多人看到LPL的职业选手在比赛时光芒四</span></div>
+                <div class="common_margin">原创时间: <span>2016-03-28 10:46:59</span></div>
+                <div class="common_margin">
+                    <a class="common_a" href="#">链接原文</a>
+                    <a class="common_a" href="#">删除</a>
+                    <a class="common_a" href="/contentEdit">编辑</a>
+                </div>
+                <div class="holder"></div>
+            </div>
+        </div>
+        <div class="common_box">
+            <div class="content_item">
+                <div class="a_title">标题</div>
+                <div class="common_margin">摘要: <span>很多人看到LPL的职业选手在比赛时光芒四很多人看到LPL的职业选手在比赛时光芒四很多人看到LPL的职业选手在比赛时光芒四</span></div>
+                <div class="common_margin">原创时间: <span>2016-03-28 10:46:59</span></div>
+                <div class="common_margin">
+                    <a class="common_a" href="#">链接原文</a>
+                    <a class="common_a" href="#">删除</a>
+                    <a class="common_a" href="/contentEdit">编辑</a>
+                </div>
+                <div class="holder"></div>
+            </div>
+        </div>
+        <div id="pager1"></div>
+    </div>
+    <script type="text/javascript">
+        $("#pager1").createPage({
+            pageCount: 10,
+            current: 3,
+            backFn: function (page) {
+                window.location.reload();
+            }
+        })
+    </script>
+</body>
+</html>
